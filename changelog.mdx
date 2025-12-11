@@ -1,0 +1,132 @@
+---
+title: Changelog
+description: History of updates and changes to the Payal Gawade Documentation platform.
+---
+
+## Overview
+
+Stay informed about the latest improvements to Payal Gawade Documentation. You receive regular updates that enhance usability, add new features, and fix issues. Review this changelog to track changes across versions.
+
+<Callout kind="info">
+  Subscribe to notifications for major releases to ensure you never miss critical updates.
+</Callout>
+
+<Columns cols={3}>
+  <Card title="Latest Release" icon="zap" href="#v1-2-0">
+    Discover new features in v1.2.0.
+  </Card>
+  <Card title="Report Issues" icon="bug" href="https://github.com/payalgawade/docs/issues" target="_blank">
+    Found a bug? Submit it here.
+  </Card>
+  <Card title="Contribute" icon="github" href="https://github.com/payalgawade/docs" target="_blank">
+    Help improve the documentation.
+  </Card>
+</Columns>
+
+## Recent Updates
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors, like `#3B82F6` for your projects.
+- Introduced `<Video>` component for embedding tutorials directly in docs.
+
+## Improvements
+
+- Enhanced MDX parsing with better special character escaping for `{variable}` and `<Component>`.
+- Optimized rendering speed by `>30%` for pages with multiple components.
+
+## Bug Fixes
+
+- Fixed nested code block rendering using 4 backticks.
+- Resolved heading hierarchy issues preventing H1 usage in body content.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated `<Tabs>` and `<Steps>` for platform-specific guides.
+- Added `<ParamField>` and `<ResponseField>` for API documentation.
+
+## Bug Fixes
+
+- Corrected JSX attribute syntax requiring double quotes: `title="Text"`.
+- Patched Mermaid diagram rendering to use code blocks only, not `<Mermaid>` components.
+
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+// Example API call with new ParamField support
+const response = await fetch('/api/docs', {
+  headers: { 'Authorization': `Bearer ${YOUR_TOKEN}` }
+});
+```
+
+```python
+# Secure API request example
+import requests
+response = requests.get('/api/docs', headers={'Authorization': f'Bearer {YOUR_TOKEN}'})
+```
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Removed legacy H1 headings; use frontmatter `title` instead.
+
+## New Features
+
+- Launched core components: `<Callout>`, `<Card>`, `<Columns>`.
+- Enabled full MDX support with YAML frontmatter validation.
+
+## Improvements
+
+- Added 15+ components including `<Request>`, `<Response>`, and `<Update>` for changelogs.
+
+<Tabs>
+  <Tab title="Upgrade Steps" icon="settings">
+    <Steps>
+      <Step title="Backup" icon="save">
+        Save your current `docs/` folder.
+      </Step>
+      <Step title="Update" icon="download">
+        Run `npm update payal-gawade-docs`.
+      </Step>
+      <Step title="Verify" icon="check-circle">
+        Build and test your site.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Migration Guide" icon="book-open">
+    Review changes for `{API_KEY}` escaping and component syntax.
+  </Tab>
+</Tabs>
+
+</Update>
+
+## Stay Updated
+
+Follow these steps to keep your documentation current.
+
+<Steps>
+  <Step title="Check Regularly" icon="clock">
+    Visit this changelog weekly for new releases.
+  </Step>
+  <Step title="Enable Notifications" icon="bell">
+    Watch the GitHub repo for updates.
+  </Step>
+  <Step title="Test Changes" icon="play">
+    Deploy to staging before production.
+  </Step>
+</Steps>
+
+<Expandable title="Full Version History" default-open="false">
+  Older versions include v0.9.x with initial MDX setup and v0.8.x focusing on basic markdown support. Contact support for archives.
+</Expandable>
+
+This changelog evolves with your needs, ensuring Payal Gawade Documentation remains a robust platform for project docs.

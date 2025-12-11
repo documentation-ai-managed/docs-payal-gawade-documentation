@@ -1,0 +1,104 @@
+---
+title: Customization and Settings
+description: How to personalize your documentation space, including branding and advanced options.
+---
+
+## Overview
+
+Personalize your payal gawade Documentation space to match your brand. Set custom colors, adjust themes, and manage exports and imports efficiently. Start with the brand color `#3B82F6` for a professional blue accent.
+
+<Callout kind="tip">
+  Save changes after each customization to see updates across your documentation.
+</Callout>
+
+## Brand Color Setup
+
+Configure your primary brand color to `#3B82F6` or any hex value. This affects buttons, links, and highlights throughout the site.
+
+<Steps>
+  <Step title="Access Settings" icon="settings">
+    Navigate to your workspace dashboard and select **Settings** > **Branding**.
+  </Step>
+  <Step title="Enter Color" icon="palette">
+    Paste your hex code, such as `#3B82F6`, into the **Primary Color** field.
+  </Step>
+  <Step title="Preview and Save" icon="eye">
+    Preview the changes live, then click **Apply Changes**.
+  </Step>
+</Steps>
+
+## Theme Customization
+
+Tailor light and dark themes with custom CSS variables. Override defaults for fonts, spacing, and more.
+
+<Tabs>
+  <Tab title="Light Theme" icon="sun">
+    Update the light mode variables in your theme file.
+
+    <CodeGroup tabs="CSS,JSON">
+      ```css
+      :root {
+        --primary-color: #3B82F6;
+        --font-family: 'Inter', sans-serif;
+        --border-radius: 8px;
+      }
+      ```
+      ```json
+      {
+        "light": {
+          "primaryColor": "#3B82F6",
+          "fontFamily": "Inter, sans-serif"
+        }
+      }
+      ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Dark Theme" icon="moon">
+    Customize dark mode for better contrast.
+
+    ```css
+    [data-theme="dark"] {
+      --primary-color: #60A5FA;
+      --background: #0F172A;
+      --text-primary: #F1F5F9;
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Quick Access Options
+
+<Columns cols={2}>
+  <Card title="Export Documentation" icon="download" href="/docs/export">
+    Generate PDF, HTML, or Markdown exports with one click.
+  </Card>
+  <Card title="Import Content" icon="upload" href="/docs/import">
+    Bring in Markdown files or GitHub repos seamlessly.
+  </Card>
+</Columns>
+
+## Advanced Export and Import
+
+Explore formats and automation for larger projects.
+
+<Expandable title="Supported Export Formats" default-open="true">
+  | Format | Use Case | File Size Limit |
+  |--------|----------|-----------------|
+  | PDF    | Printing and sharing | 50MB |
+  | HTML   | Web deployment | 100MB |
+  | Markdown | Version control | Unlimited |
+</Expandable>
+
+<Expandable title="Import Automation" default-open="false">
+  Set up webhooks for automatic imports from GitHub.
+
+  ```bash
+  curl -X POST https://api.payalgawadedocs.com/webhooks/import \
+    -H "Authorization: Bearer YOUR_TOKEN" \
+    -d '{"repo": "user/project", "branch": "main"}'
+  ```
+</Expandable>
+
+<Callout kind="alert">
+  Back up your configuration before importing large datasets to avoid overwrites.
+</Callout>

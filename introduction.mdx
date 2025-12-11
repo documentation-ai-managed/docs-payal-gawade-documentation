@@ -1,0 +1,103 @@
+---
+title: Welcome to Payal Gawade Documentation
+description: An overview of the default documentation space for organizing and managing project documentation, including key features and getting started tips.
+---
+
+## Overview
+
+Welcome to your Payal Gawade Documentation space. Use this default hub to organize, manage, and share all project documentation in one centralized location. You gain full control over content structure, searchability, and collaboration without needing external tools. Build knowledge bases, API references, or user guides with intuitive editing and powerful features tailored for teams.
+
+Key benefits include real-time collaboration, version history, and customizable themes that match your brand, such as the primary color `#3B82F6`. Start creating pages immediately and scale as your projects grow.
+
+## Key Features
+
+Discover the core capabilities that make this documentation space powerful and flexible.
+
+<Columns cols={3}>
+  <Card title="Easy Organization" icon="layout" href="/docs/organization">
+    Structure content with nested pages, tags, and navigation menus. Drag and drop to reorder sections effortlessly.
+  </Card>
+  <Card title="Advanced Search" icon="search" href="/docs/search">
+    Full-text search across all pages with syntax highlighting and filters for quick access to information.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/docs/versions">
+    Track changes, revert edits, and maintain multiple versions of your docs with Git-like workflows.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Customize your sidebar navigation to reflect project structure for faster team onboarding.
+</Callout>
+
+## Getting Started
+
+Follow these steps to set up your first documentation page.
+
+<Steps>
+  <Step title="Create a New Page" icon="plus">
+    Navigate to the dashboard and click `New Page`. Choose a template like "API Reference" or start blank.
+  </Step>
+  <Step title="Add Content" icon="edit-3">
+    Use the visual editor for markdown, or switch to source mode for advanced MDX components.
+  </Step>
+  <Step title="Publish and Share" icon="share-2">
+    Preview changes, then publish. Generate a shareable link or embed in your app.
+  </Step>
+</Steps>
+
+## Core Capabilities by Role
+
+Tailor the space to different team needs.
+
+<Tabs>
+  <Tab title="Developers" icon="code">
+    Integrate API docs with `<Request>` and `<Response>` components for interactive examples.
+    
+    <CodeGroup tabs="JavaScript,Python">
+```javascript
+const response = await fetch('https://api.example.com/users', {
+  headers: { Authorization: `Bearer ${YOUR_TOKEN}` }
+});
+```
+```python
+import requests
+response = requests.get('https://api.example.com/users', headers={
+    'Authorization': f'Bearer {YOUR_TOKEN}'
+})
+```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Product Managers" icon="bar-chart-3">
+    Use cards and tables to showcase roadmaps and feature comparisons without coding.
+  </Tab>
+  <Tab title="Designers" icon="palette">
+    Apply brand colors like `#3B82F6` directly in themes for consistent visuals.
+  </Tab>
+</Tabs>
+
+## Brand Guidelines
+
+Follow these rules to maintain consistency across your docs.
+
+<ExpandableGroup>
+  <Expandable title="Primary Colors" default-open="true">
+    - Primary: `#3B82F6`
+    - Secondary: `#1E40AF`
+    - Accent: `#60A5FA`
+    
+    Update your theme config:
+    
+````css
+/* theme.css */
+:root {
+  --primary: #3B82F6;
+  --secondary: #1E40AF;
+}
+````
+  </Expandable>
+  <Expandable title="Typography and Icons">
+    Use Lucide icons like `zap` or `shield`. Stick to sans-serif fonts for readability.
+  </Expandable>
+</ExpandableGroup>
+
+This space evolves with your projects. Explore features, contribute content, and collaborate seamlessly to keep documentation always up-to-date.
